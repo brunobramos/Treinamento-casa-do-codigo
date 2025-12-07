@@ -5,7 +5,7 @@ import java.time.Instant
 
 @Entity
 class Autor(
-    val email: String,
+    email: String,
 
     @Column(nullable = false)
     val nome: String,
