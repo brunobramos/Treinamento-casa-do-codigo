@@ -5,7 +5,6 @@ import java.time.Instant
 
 @Entity
 class Autor(
-    @Id
     val email: String,
 
     @Column(nullable = false)
@@ -14,10 +13,13 @@ class Autor(
     @Column(nullable = false)
     val descricao: String) {
 
+        @Id
+        val emailFormatado = email.lowercase().trim()
+
         @Column(nullable = false)
         val instante = Instant.now()
 
     override fun toString(): String {
-        return ("Nome: $nome, Email: $email, Descrição: $descricao, Instante da criação: $instante")
+        return ("Nome: $nome, Email: $emailFormatado, Descrição: $descricao, Instante da criação: $instante")
     }
 }
