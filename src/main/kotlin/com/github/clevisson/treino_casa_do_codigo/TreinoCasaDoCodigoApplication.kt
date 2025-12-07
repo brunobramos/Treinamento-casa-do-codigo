@@ -10,7 +10,7 @@ class TreinoCasaDoCodigoApplication {
 
     @Bean
     fun TestePersistencia(repositorio: AutorRepository) = CommandLineRunner {
-        val autor = Autor("brunobramos@gmail.com", "Bruno Bernardo Ramos", "Aluno do treinamento")
+        val autor = Autor("brunobramos@gmail.com.br", "Bruno Bernardo Ramos", "Aluno do treinamento")
         repositorio.save(autor)
         println("Autor salvo: $autor")
     }
