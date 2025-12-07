@@ -11,7 +11,7 @@ class Autor(
     @Column(nullable = false)
     val nome: String,
 
-    @Column
+    @Column(nullable = false)
     val descricao: String) {
 
         @Column(nullable = false)
