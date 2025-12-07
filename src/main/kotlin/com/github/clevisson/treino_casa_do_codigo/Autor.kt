@@ -1,6 +1,7 @@
 package com.github.clevisson.treino_casa_do_codigo
 
 import jakarta.persistence.*
+import jakarta.validation.constraints.Size
 import java.time.Instant
 
 @Entity
@@ -10,6 +11,7 @@ class Autor(
     @Column(nullable = false)
     val nome: String,
 
+    @field:Size(max = 400)
     @Column(nullable = false)
     val descricao: String
 ) {

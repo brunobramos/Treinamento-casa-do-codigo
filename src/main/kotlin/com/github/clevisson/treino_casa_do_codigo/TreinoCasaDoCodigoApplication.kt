@@ -13,6 +13,15 @@ class TreinoCasaDoCodigoApplication {
         val autor = Autor("brunobramos@gmail.com.br", "Bruno Bernardo Ramos", "Aluno do treinamento")
         repositorio.save(autor)
         println("Autor salvo: $autor")
+        val autor2 = Autor("teste@gmail.com.br", "teste", "Aluno teste")
+        repositorio.save(autor2)
+        println("Autor2 salvo: $autor2")
+
+        // SELECT * equivalente
+        val todos = repositorio.findAll()
+        println("Autores no banco:")
+        todos.forEach { println(it) }
+
     }
 }
 
